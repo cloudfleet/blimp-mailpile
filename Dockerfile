@@ -4,3 +4,6 @@
 
 FROM cloudfleet/mailpile
 
+ADD . /opt/cloudfleet/setup
+RUN /opt/cloudfleet/setup/mp-setup.sh
+
