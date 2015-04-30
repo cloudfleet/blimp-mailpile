@@ -1,0 +1,14 @@
+nginx:
+  image: nginx
+  volumes:
+    - ./test/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+  ports:
+    - "8888:8888"
+  links:
+    - mailpile
+mailpile:
+  environment:
+    CLOUDFLEET_USERNAME: test
+  build: .
+  ports:
+    - "33411:33411"
