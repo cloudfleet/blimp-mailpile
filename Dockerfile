@@ -8,4 +8,6 @@ VOLUME /opt/cloudfleet/Mails
 
 ADD . /opt/cloudfleet/setup
 
+USER root
+
 CMD /opt/cloudfleet/setup/scripts/start-debug.sh
