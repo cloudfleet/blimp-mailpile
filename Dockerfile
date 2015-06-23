@@ -9,5 +9,6 @@ VOLUME /opt/cloudfleet/Mails
 ADD . /opt/cloudfleet/setup
 
 USER root
+ENV USER=mailpile
 
 CMD /opt/cloudfleet/setup/scripts/start-debug.sh
