@@ -1,6 +1,6 @@
 #! /bin/bash
-chown -r mailpile:mailpile /mailpile-data/.local/share/Mailpile
-chown -r mailpile:mailpile /mailpile-data/.gnupg
+chown -R mailpile:mailpile /mailpile-data/.local/share/Mailpile
+chown -R mailpile:mailpile /mailpile-data/.gnupg
 
 su - mailpile <<EOF
 
