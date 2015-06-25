@@ -2,6 +2,10 @@
 chown -R mailpile:mailpile /mailpile-data/.local/share/Mailpile
 chown -R mailpile:mailpile /mailpile-data/.gnupg
 
+if [ ! -f /mailpile-data/.local/share/Mailpile/default/mailpile.cfg ]; then
+  cp /opt/cloudfleet/setup/scripts/mailpile.cfg /mailpile-data/.local/share/Mailpile/default/mailpile.cfg
+fi
+
 su - mailpile <<EOF
 
 /Mailpile/mp setup
