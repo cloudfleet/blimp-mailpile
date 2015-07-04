@@ -18,7 +18,7 @@ su - mailpile <<EOF
 wc -l /mailpile-data/.local/share/Mailpile/default/mailpile.cfg
 /Mailpile/mp set sys.debug = log http
 wc -l /mailpile-data/.local/share/Mailpile/default/mailpile.cfg
-/Mailpile/mp --www=0.0.0.0:33411/mailpile/${CLOUDFLEET_USERNAME} --wait
+/Mailpile/mp --www=0.0.0.0:33411/mailpile/${CLOUDFLEET_USERNAME}
 wc -l /mailpile-data/.local/share/Mailpile/default/mailpile.cfg
-
+/Mailpile/mp --wait
 EOF
