@@ -3,6 +3,7 @@ language = en_US             ; User interface language
 open_in_browser = False      ; (default) Open in browser on startup
 
 [config/sys: Technical system settings]
+http_no_auth = True
 debug = log http
 http_host = 0.0.0.0          ; Listening host for web UI
 http_port = 33411            ; Listening port for web UI
