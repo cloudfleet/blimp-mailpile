@@ -10,7 +10,7 @@ fi
 
 if [ ! -f /mailpile-data/.local/share/Mailpile/default/cloudfleet.vcf ]; then
   echo "Copying initial Mailpile profile"
-  cat  > /mailpile-data/.local/share/Mailpile/default/cloudfleet.vcf <<EOF
+  cat  > /mailpile-data/.local/share/Mailpile/default/vcards/cloudfleet.vcf <<EOF
 BEGIN:VCARD
 VERSION:4.0
 CLIENTPIDMAP:991\;priority
