@@ -1,7 +1,7 @@
 #! /bin/bash
 set -e
 
-mkdir -p /mailpile-data/.local/share/Mailpile/default
+mkdir -p /mailpile-data/.local/share/Mailpile/default/vcards
 
 if [ ! -f /mailpile-data/.local/share/Mailpile/default/mailpile.cfg ]; then
   echo "Copying initial Mailpile config"
