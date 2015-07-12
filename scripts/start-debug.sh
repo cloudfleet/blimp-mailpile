@@ -8,9 +8,9 @@ if [ ! -f /mailpile-data/.local/share/Mailpile/default/mailpile.cfg ]; then
   cp /opt/cloudfleet/setup/scripts/mailpile.* /mailpile-data/.local/share/Mailpile/default/
 fi
 
-if [ ! -f /mailpile-data/.local/share/Mailpile/default/vcards/cloudfleet.vcf ]; then
+if [ ! -f /mailpile-data/.local/share/Mailpile/default/vcards/c10a6f1ee10.vcf ]; then
   echo "Copying initial Mailpile profile"
-  cat  > /mailpile-data/.local/share/Mailpile/default/vcards/cloudfleet.vcf <<EOF
+  cat  > /mailpile-data/.local/share/Mailpile/default/vcards/c10a6f1ee10.vcf <<EOF
 BEGIN:VCARD
 VERSION:4.0
 CLIENTPIDMAP:991\;priority
@@ -25,7 +25,7 @@ X-MAILPILE-PROFILE-ROUTE;PREF;PID=990.4:0
 X-MAILPILE-PROFILE-SIGNATURE;PREF;PID=990.2:
 X-MAILPILE-PROFILE-SOURCE;PID=990.7:cloudfleet
 X-MAILPILE-PROFILE-TAG;PREF;PID=990.3:1b
-X-MAILPILE-RID:cloudfleet
+X-MAILPILE-RID:c10a6f1ee10
 EOF
 fi
 
