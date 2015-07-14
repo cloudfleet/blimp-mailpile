@@ -8,6 +8,8 @@ VOLUME /opt/cloudfleet/Mails
 
 ADD . /opt/cloudfleet/setup
 
+RUN /opt/cloudfleet/setup/scripts/patch.sh
+
 USER root
 ENV USER=mailpile
 
