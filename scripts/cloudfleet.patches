@@ -1,3 +1,16 @@
+diff --git a/mailpile/mail_source/local.py b/mailpile/mail_source/local.py
+index e025d77..56f9dc9 100644
+--- a/mailpile/mail_source/local.py
++++ b/mailpile/mail_source/local.py
+@@ -60,7 +60,7 @@ class LocalMailSource(BaseMailSource):
+             for sub in ('cur', 'new', 'tmp', 'Info.plist', 'wervd.ver'):
+                 if sub == 'Info.plist':
+                     sub_path = self._get_macmaildir_data(mbx_path)
+-                    if sub_path is None:
++                    if not sub_path:
+                         continue
+                 else:
+                     sub_path = os.path.join(mbx_path, sub)
 diff --git a/mailpile/smtp_client.py b/mailpile/smtp_client.py
 index 7de8f1b..89ae631 100644
 --- a/mailpile/smtp_client.py
@@ -8,5 +21,5 @@ index 7de8f1b..89ae631 100644
                      server.connect(host, int(port))
 +                    server.ehlo_or_helo_if_needed()
                  return server
-
+ 
              def sm_startup():
