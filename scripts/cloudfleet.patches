@@ -8,5 +8,5 @@ index 7de8f1b..89ae631 100644
                      server.connect(host, int(port))
 +                    server.ehlo_or_helo_if_needed()
                  return server
- 
+
              def sm_startup():
