@@ -1,0 +1,12 @@
+diff --git a/mailpile/smtp_client.py b/mailpile/smtp_client.py
+index 7de8f1b..89ae631 100644
+--- a/mailpile/smtp_client.py
++++ b/mailpile/smtp_client.py
+@@ -248,6 +248,7 @@ def SendMail(session, msg_mid, from_to_msg_ev_tuples,
+                     conn_needs = [ConnBroker.OUTGOING_SMTP]
+                 with ConnBroker.context(need=conn_needs) as ctx:
+                     server.connect(host, int(port))
++                    server.ehlo_or_helo_if_needed()
+                 return server
+ 
+             def sm_startup():
